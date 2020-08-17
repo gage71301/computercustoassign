@@ -66,7 +66,7 @@ class App extends Component {
             <h2>Customize your laptop</h2>
           </form>
 
-          <Product features={features}/>
+          <Product features={this.props.features} selected={this.selected} />
           <Cart total={total} selected={this.state.selected} />
         </main>
       </div>

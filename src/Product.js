@@ -2,17 +2,21 @@ import React from 'react';
 
 import slugify from 'slugify';
 
+
+
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD'
 });
 
 function Product(props) {
-  console.dir(props.features);
+
+  
   const features = Object.keys(props.features).map((feature, idx) => {
         const featureHash = feature + '-' + idx;
         const options = props.features[feature].map(item => {
           const itemHash = slugify(JSON.stringify(item));
+
           return (
             <div key={itemHash} className="feature__item">
               <input
